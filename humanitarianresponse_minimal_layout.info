@@ -29,7 +29,6 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[variable][] = admin_theme
 features[variable][] = logintoboggan_login_block_type
-features[variable][] = site_frontpage
 features[variable][] = superfish_menu_1
 features[variable][] = superfish_shadow_1
 features[variable][] = superfish_style_1
