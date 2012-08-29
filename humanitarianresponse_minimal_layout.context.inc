@@ -32,8 +32,8 @@ function humanitarianresponse_minimal_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'user-login' => array(
-          'module' => 'user',
+        'browserid-login' => array(
+          'module' => 'browserid',
           'delta' => 'login',
           'region' => 'user_second',
           'weight' => '-10',

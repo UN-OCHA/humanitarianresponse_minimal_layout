@@ -9,6 +9,7 @@ dependencies[] = context_breadcrumb_current_page
 dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = follow
+dependencies[] = hr_login
 dependencies[] = humanitarianresponse_links
 dependencies[] = i18n_boxes
 dependencies[] = logintoboggan
