@@ -29,6 +29,9 @@ function humanitarianresponse_minimal_layout_context_default_contexts() {
         'sitewide' => 'sitewide',
       ),
     ),
+    'theme_html' => array(
+      'class' => 'iframe',
+    ),
   );
   $context->condition_mode = 0;
 
