@@ -11,6 +11,7 @@ dependencies[] = context_disable_context
 dependencies[] = context_get
 dependencies[] = context_ui
 dependencies[] = ctools
+dependencies[] = empty_front_page
 dependencies[] = follow
 dependencies[] = hr_login
 dependencies[] = humanitarianresponse_links
