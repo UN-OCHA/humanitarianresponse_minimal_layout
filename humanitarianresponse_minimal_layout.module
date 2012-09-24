@@ -26,3 +26,66 @@ function humanitarianresponse_minimal_layout_enable() {
     ->execute();
 }
 
+/**
+ * Implements of hook_menu_alter().
+ */
+function humanitarianresponse_minimal_layout_menu_alter(&$items) {
+  // Do not hijack term page if CTools' Page Manager is hijacking it.
+  if (!variable_get('page_manager_term_view_disabled', TRUE)) {
+    return;
+  }
+
+  $items['taxonomy/term/%taxonomy_term']['page callback'] = 'humanitarianresponse_minimal_layout_taxonomy_term_page';
+  $items['taxonomy/term/%taxonomy_term']['title callback'] = 'humanitarianresponse_minimal_layout_taxonomy_term_title';
+  $items['taxonomy/term/%taxonomy_term']['file'] = 'humanitarianresponse_minimal_layout.module';
+  $items['taxonomy/term/%taxonomy_term']['module'] = 'humanitarianresponse_minimal_layout';
+}
+
+/**
+ * Menu callback; displays all nodes associated with a term.
+ *
+ * @param $term
+ *   The taxonomy term.
+ * @return
+ *   The page content.
+ */
+function humanitarianresponse_minimal_layout_taxonomy_term_page($term) {
+  if (function_exists('i18n_taxonomy_localize_terms')) {
+    $term = i18n_taxonomy_localize_terms($term);
+  }
+  
+  // Assign the term name as the page title.
+  drupal_set_title($term->name);
+
+  // Build breadcrumb based on the hierarchy of the term.
+  $current = (object) array(
+    'tid' => $term->tid,
+  );
+  // @todo This overrides any other possible breadcrumb and is a pure hard-coded
+  //   presumption. Make this behavior configurable per vocabulary or term.
+  $breadcrumb = array();
+  while ($parents = taxonomy_get_parents($current->tid)) {
+    $current = array_shift($parents);
+    $breadcrumb[] = l($current->name, 'taxonomy/term/' . $current->tid);
+  }
+  $breadcrumb[] = l(t('Home'), NULL);
+  $breadcrumb = array_reverse($breadcrumb);
+  drupal_set_breadcrumb($breadcrumb);
+  drupal_add_feed('taxonomy/term/' . $term->tid . '/feed', 'RSS - ' . $term->name);
+
+  $build = array();
+
+  $build['term_heading'] = array(
+    '#prefix' => '<div class="term-listing-heading">',
+    '#suffix' => '</div>',
+    'term' => taxonomy_term_view($term, 'full'),
+  );
+  
+  return $build;
+}
+
+
+function humanitarianresponse_minimal_layout_taxonomy_term_title($term) {
+  $name = entity_label('taxonomy_term', $term);
+  return $name;
+}
