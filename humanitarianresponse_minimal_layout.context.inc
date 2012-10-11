@@ -27,6 +27,7 @@ function humanitarianresponse_minimal_layout_context_default_contexts() {
     'disable_context' => array(
       'disabled' => array(
         'sitewide' => 'sitewide',
+        'search_box' => 'search_box',
       ),
     ),
     'theme_html' => array(
