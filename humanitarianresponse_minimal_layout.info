@@ -28,6 +28,7 @@ features[box][] = legal
 features[context][] = iframe
 features[context][] = sitewide
 features[context][] = sitewide_breadcrumb
+features[context][] = unbranded_iframe
 features[ctools][] = boxes:box:1
 features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
