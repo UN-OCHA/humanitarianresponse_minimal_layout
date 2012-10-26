@@ -35,6 +35,7 @@ features[ctools][] = context:context:3
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[user_permission][] = administer boxes
+features[user_permission][] = administer contexts
 features[user_permission][] = edit boxes
 features[variable][] = admin_theme
 features[variable][] = logintoboggan_login_block_type
