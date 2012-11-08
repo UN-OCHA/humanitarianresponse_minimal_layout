@@ -21,7 +21,7 @@ function humanitarianresponse_minimal_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'logintoboggan_login_block_type';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['logintoboggan_login_block_type'] = $strongarm;
 
   $strongarm = new stdClass();
