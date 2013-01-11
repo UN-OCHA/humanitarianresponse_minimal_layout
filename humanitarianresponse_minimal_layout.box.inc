@@ -19,7 +19,7 @@ function humanitarianresponse_minimal_layout_default_box() {
   $box->description = 'Contact';
   $box->options = array(
     'body' => array(
-      'value' => '<p>This site is part of the <a href="http://www.humanitarianresponse.info">HumanitarianResponse network</a>. Write to <a href="mailto:info@humanitarianresponse.info">info@humanitarianresponse.info</a> for more information.</p>',
+      'value' => '<p>Email: <a href="mailto:info@humanitarianresponse.info">info@humanitarianresponse.info</a></p><p>Visit the global <a href="http://www.humanitarianresponse.info">HumanitarianResponse.info</a> site to find other resources and other response sites.</p>',
       'format' => 'filtered_html',
     ),
     'i18n_boxes' => array(
@@ -34,12 +34,12 @@ function humanitarianresponse_minimal_layout_default_box() {
   $box->api_version = 1;
   $box->delta = 'legal';
   $box->plugin_key = 'i18n';
-  $box->title = 'Legal';
-  $box->description = 'Legal';
+  $box->title = 'About';
+  $box->description = 'About';
   $box->options = array(
     'body' => array(
-      'value' => '<p>Copyright 2012 UNOCHA</p>',
-      'format' => 'filtered_html',
+      'value' => '<p><a href="http://www.humanitarianresponse.info" target="_blank">HumanitarianResponse.info</a> is provided by UN OCHA to support humanitarian operations globally</p><p><a href="http://www.humanitarianresponse.info/about" target="_blank">Learn more about HumanitarianResponse.info</a></p><p><a href="http://www.unocha.org" target="_blank"><img alt="OCHA logo" src="http://www.humanitarianresponse.info/sites/all/themes/humanitarianresponse/images/ocha.png"></a></p>',
+      'format' => 'full_html',
     ),
     'i18n_boxes' => array(
       'language' => '__LOCALIZE__',
