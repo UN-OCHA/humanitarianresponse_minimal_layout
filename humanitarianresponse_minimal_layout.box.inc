@@ -19,7 +19,7 @@ function humanitarianresponse_minimal_layout_default_box() {
   $box->description = 'Contact';
   $box->options = array(
     'body' => array(
-      'value' => '<p>Email: <a href="mailto:info@humanitarianresponse.info">info@humanitarianresponse.info</a></p><p>Visit the global <a href="http://www.humanitarianresponse.info">HumanitarianResponse.info</a> site to find other resources and other response sites.</p>',
+      'value' => '<p>Email: <a href="mailto:info@humanitarianresponse.info">info@humanitarianresponse.info</a></p><p>Visit the global <a href="http://www.humanitarianresponse.info">HumanitarianResponse.info</a> site to find other resources and response sites.</p>',
       'format' => 'filtered_html',
     ),
     'i18n_boxes' => array(
