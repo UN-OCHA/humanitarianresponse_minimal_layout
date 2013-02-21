@@ -14,8 +14,8 @@ function humanitarianresponse_minimal_layout_user_default_permissions() {
   $permissions['administer boxes'] = array(
     'name' => 'administer boxes',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'boxes',
   );
@@ -24,8 +24,8 @@ function humanitarianresponse_minimal_layout_user_default_permissions() {
   $permissions['administer contexts'] = array(
     'name' => 'administer contexts',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'context_ui',
   );
@@ -34,8 +34,8 @@ function humanitarianresponse_minimal_layout_user_default_permissions() {
   $permissions['edit boxes'] = array(
     'name' => 'edit boxes',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'boxes',
   );
