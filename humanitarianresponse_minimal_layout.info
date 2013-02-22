@@ -8,6 +8,7 @@ dependencies[] = context
 dependencies[] = context_breadcrumb_current_page
 dependencies[] = context_disable_context
 dependencies[] = context_get
+dependencies[] = context_redirect
 dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = empty_front_page
