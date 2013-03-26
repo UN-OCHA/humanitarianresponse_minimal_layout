@@ -63,18 +63,6 @@ function humanitarianresponse_minimal_layout_context_default_contexts() {
           'region' => 'content',
           'weight' => '0',
         ),
-        'user-login' => array(
-          'module' => 'user',
-          'delta' => 'login',
-          'region' => 'user_second',
-          'weight' => '-35',
-        ),
-        'logintoboggan-logintoboggan_logged_in' => array(
-          'module' => 'logintoboggan',
-          'delta' => 'logintoboggan_logged_in',
-          'region' => 'user_second',
-          'weight' => '-30',
-        ),
         'superfish-1' => array(
           'module' => 'superfish',
           'delta' => '1',
